@@ -1,0 +1,96 @@
+body{
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 1440px;
+    display: flex ;
+    flex-flow: column;
+    background-color: #ffff;
+}
+main{
+background-color: darkblue;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    flex-flow: column;
+}
+.redes{
+    transition: 0.3s;
+    text-decoration: dashed;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 0 black;
+    margin: 10px;
+
+}
+.um, .dois, .tres{
+    transition: 0.3s;
+}
+.um:hover, .dois:hover, .tres:hover{
+    font-size: 25px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.hg-conteudo{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+}
+.hg-conteudo > nav{
+order: -1;
+}
+header, footer{
+    background-color: skyblue;
+
+}
+img{
+height: 120px;
+width: 120px;
+border-radius: 120px;
+border: 2px solid black;
+transition: 0.5s;
+}
+
+img:hover {
+    width: 180px;
+    height: 180px;
+}
+
+main{
+    color: aliceblue;
+}
+nav, aside{
+    background-color: blanchedalmond;
+    color: black;
+}
+.hg-conteudo > main{
+    flex: 1;
+}
+@media (min-width: 768px) {
+    .hg-conteudo {
+        flex-flow: row;
+    }    
+}
+@media (min-width: 768px) {
+    /* ... */
+
+    .hg-conteudo > main {
+        flex: 1;
+    }
+}
+@media (min-width: 768px) {
+    /* ... */
+
+    .hg-conteudo > aside,
+    .hg-conteudo > nav {
+        flex: 0 0 200px;
+    }
+}
+
