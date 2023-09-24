@@ -4,10 +4,17 @@ body{
     max-width: 1440px;
     display: flex ;
     flex-flow: column;
-    background-color: #ffff;
+    background-color: #10002b;
 }
 main{
-background-color: darkblue;
+background-color: #10002b;
+display: inline-block;
+align-items: center;
+justify-content: center;
+}
+h1 {
+    color: #c77dff;
+    font-size: xx-large;
 }
 
 header{
@@ -17,15 +24,25 @@ header{
     height: 310px;
     flex-flow: column;
 }
+footer {
+    background-color:#5a189a ;
+}
+.rede1, .rede2, .rede3 {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
 .redes{
     transition: 0.3s;
     text-decoration: dashed;
-    background-color: blue;
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 3px 3px 0 0 black;
+    box-shadow: 3px 3px 0 0 #c77dff;
     margin: 10px;
-
+    background-color: #240046
+}
+.redes a:hover {
+    color: #10002b;
 }
 .um, .dois, .tres{
     transition: 0.3s;
@@ -34,7 +51,7 @@ header{
     font-size: 25px;
 }
 a {
-    color: white;
+    color: #c77dff;
     text-decoration: none;
     padding: 10px;
 }
@@ -46,29 +63,71 @@ a {
 .hg-conteudo > nav{
 order: -1;
 }
-header, footer{
-    background-color: skyblue;
+header{
+    background-color: #10002b;
 
 }
-img{
+.foto{
+transition: 0.5s;
 height: 120px;
 width: 120px;
 border-radius: 120px;
-border: 2px solid black;
-transition: 0.5s;
+border: 2px solid #e0aaff
 }
 
-img:hover {
+.foto:hover {
     width: 180px;
     height: 180px;
 }
-
-main{
-    color: aliceblue;
+.card {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    perspective: 800px;
+    margin: 10px;
 }
-nav, aside{
-    background-color: blanchedalmond;
-    color: black;
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 1s;
+    border: 2px solid #5a189a;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.front {
+    background-color: #10002b;
+    color: #c77dff
+}
+.back {
+    background-color: #5a189a;
+    color: #eeeeee;
+    transform: rotateY(-180deg)
+}
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+.card:hover .back{
+    transform: rotateY(0);
+}
+.front h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 55%;
+}
+.back p {
+    font-size: large;
+    font-style: oblique;
+    margin: 10px;
+}
+
+ aside{
+    background-color: #10002b;
+    color: #c77dff;
 }
 .hg-conteudo > main{
     flex: 1;
@@ -88,8 +147,7 @@ nav, aside{
 @media (min-width: 768px) {
     /* ... */
 
-    .hg-conteudo > aside,
-    .hg-conteudo > nav {
+    .hg-conteudo > aside{
         flex: 0 0 200px;
     }
 }
